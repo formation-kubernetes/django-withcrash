@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>With Config</title>
+        <style>
+            * {
+                font-size: 24px;
+            }
+            h1 {
+                font-size: 50px !important;
+            }
+        </style>
+    </head>
+    <body {% if member1 and member2 and member3 and team %}style="background: yellow; padding: 0; margin: 0;"{% endif %}>
+        <center>
+            <h1>
+                ÉQUIPE : <i>{{ team|upper }}</i>
+            </h1>
+            <div>
+                Membre d'équipe :
+                <ol>
+                    <li>Membre 1 : <b>{{ member1|upper }}</b></li>
+                    <li>Membre 2 : <b>{{ member2|upper }}</b></li>
+                    <li>Membre 3 : <b>{{ member3|upper }}</b></li>
+                </ol>
+            </div>
+        </center>
+    </body>
+</html>
